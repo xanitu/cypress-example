@@ -82,7 +82,6 @@ contents:
         title: Text richtext field
         index:
           type: searchabletext
-          required: true
       text_field:
         type: guillotina.schema.Text
         title: Text field
@@ -98,7 +97,6 @@ contents:
       choice_field:
         type: guillotina.schema.Choice
         title: Choice field
-        required: true
         vocabulary: 
           plone: Plone text
           guillotina: Guillotina text

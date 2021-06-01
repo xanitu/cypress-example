@@ -66,6 +66,8 @@
       username: env['USER'],
       password: env['PASSWORD_UNIVERSAL'],
       email: env['USER'],
+      user_roles: ['guillotina.ContainerAdmin', 'guillotina.Member'],
+      user_permissions: ['guillotina.AddContent'],
     }),
     headers: getHeaders(),
   })
