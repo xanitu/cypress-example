@@ -24,11 +24,17 @@ export default function Login() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} data-test="loginFormTest">
       <div className="field">
         <label className="label">Username</label>
         <div className="control">
-          <input className="input" type="text" placeholder="Username" {...register('username')} />
+          <input
+            className="input"
+            type="text"
+            placeholder="Username"
+            data-test="inputUsernameTest"
+            {...register('username')}
+          />
         </div>
       </div>
       <div className="field">
@@ -38,13 +44,19 @@ export default function Login() {
             className="input"
             type="password"
             placeholder="Password"
+            data-test="inputPasswordTest"
             {...register('password')}
           />
         </div>
       </div>
       <div className="field is-grouped">
         <div className="control">
-          <button disabled={loading} type="submit" className="button is-link">
+          <button
+            disabled={loading}
+            type="submit"
+            className="button is-link"
+            data-test="btnLoginSubmit"
+          >
             Submit
           </button>
         </div>
